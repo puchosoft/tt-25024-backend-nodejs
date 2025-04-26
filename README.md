@@ -37,3 +37,12 @@ Para mantener tu fork actualizado con el repositorio principal, podés agregar e
 
 
 Este repositorio está destinado exclusivamente al seguimiento y práctica del curso.
+
+### Crear un rama para realizar tus modificaciones
+
+```
+git brach <tu_rama>
+git checkout <tu_rama>
+```
+
+Mantené el branch ***main*** sin modificaciones, de modo de recibir actualizaciones del proyecto "oficial"
