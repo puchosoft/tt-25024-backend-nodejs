@@ -73,3 +73,5 @@ async function solicitarPrenda(respuesta) {
 }
 
 solicitarPrenda("no");
+
+
