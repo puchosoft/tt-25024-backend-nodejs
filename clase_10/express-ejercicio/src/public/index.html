@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+  </head>
+  <body>
+    <h1>Hola mundo</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro a
+      consectetur repellat at optio excepturi. Mollitia doloribus, ipsum
+      temporibus, quisquam earum iure incidunt obcaecati, voluptate natus dolore
+      cumque dicta!
+    </p>
+    <p id="message"></p>
+  </body>
+  <script>
+    const p = document.querySelector("p#message");
+    fetch("http://localhost:5000/api")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.message);
+        p.innerHTML = data.message;
+      });
+  </script>
+</html>
