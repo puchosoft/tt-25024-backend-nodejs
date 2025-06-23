@@ -13,4 +13,21 @@ const getUsers = (req, res) => {
       .json({ message: "Error interno del servidor", error: error.message });
   }
 };
-export default { getUsers };
+
+const createUser = (req, res) => {
+  const { name, email } = req.body;
+  try {
+    if (!name || !email) {
+      return res.status(200).json({ message: "All fields are required" });
+    }
+    const newUser = userService.createUser({ name, email });
+    console.log(newUser);
+    res.status(201).json({ message: "user created", payload: newUser });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+const seedUser=(req, res)=>{
+
+}
+export default { getUsers,createUser };

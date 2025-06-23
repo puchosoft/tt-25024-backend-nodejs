@@ -4,7 +4,7 @@ import userRoutes from "./routes/user.route.js";
 import productRoutes from "./routes/product.route.js";
 //settings
 const app = express();
-app.set("PORT", 3000);
+app.set("PORT", 5000);
 
 // middlewares
 app.use(express.json());
@@ -17,7 +17,6 @@ app.get("/", (req, res) => {
 });
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/products", productRoutes);
-// app.use("/api/v2/users", userRoutesv2);
 
 //listeners
 app.listen(app.get("PORT"), () => {
